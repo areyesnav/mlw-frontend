@@ -1,0 +1,146 @@
+@import "fonts.styl"
+@import "normalize.styl"
+
+gris_oscuro = #333333
+gris_claro = #818181
+rojo_oscuro = #E63E3E
+
+a
+	text-decoration none
+body
+	font-family: 'Varela Round', sans-serif;
+	font-size 16px
+figure
+	margin 0
+img
+	vertical-align top
+// buttons
+.buttom-menu
+	color gris_oscuro
+	left .5em
+	margin-top -10px
+	position absolute
+	top 50%
+//oocss classes
+.action
+	color white
+	font-size 1.2em
+	margin-right .5em
+	&:last-child 
+		margin-right 0
+.actions
+	position absolute
+	bottom 0
+	left 0
+	right 0
+	background rgba(black,.3)
+.border-bottom
+	border-bottom 1px solid gris_claro
+.container
+	font-size 0
+	padding 1.4rem
+	text-align center
+.menu
+	display none
+.name
+	color gris_oscuro
+.padding
+	padding 1em
+.padding-tb
+	padding 1em 0
+.left
+	float left
+.right
+	float right
+.author
+	color gris_claro
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.right-text
+	text-align right
+.relative
+	position relative
+.header
+	heigth 3.5em
+	.title
+		font-size 1.2em
+		line-height 3.5em
+		margin 0
+		text-align center
+.progress
+	margin 1em 0
+	position relative
+	.min
+		font-size .8em
+		position absolute
+		left 0
+		top -5px
+	.max
+		font-size .8em
+		position absolute
+		right 0
+		top -5px
+	.total
+		background gris_claro
+		border-radius 5px
+		height 5px
+		width 75%
+		margin 0 auto
+	.state
+		background rojo_oscuro
+		border-radius 5px
+		height 5px
+		position relative
+		width 30%
+	.circle
+		background gris_oscuro
+		border-radius 50%
+		height 10px
+		position absolute
+		right 0
+		top -2px
+		width 10px
+.relative
+	position relative
+.song
+	display inline-block
+	font-size 1rem
+	margin-bottom 1em
+	margin-right 1em
+	text-align center
+	width 8rem
+	// seudo-clase :nth-chil --> afecta a los hijos de la clase
+	&:nth-child(even)
+		margin-right 0
+	p
+		margin .5em 0
+
+.playing
+	&.small
+		width 20em
+
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 1em
+	.image
+		img
+			width 100%
+			height auto
+	.playing
+		&.medium
+			width auto
+
+@media screen and (min-width:1000px)
+	.buttom-menu
+		display none
+	.header
+		height auto
+		.title
+			display none
+	.isotipo
+		width 122px
+	.logo
+		padding 1.3em 0
